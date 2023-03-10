@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body,html{
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8.5em;
+}
+body{
+    background-color: #000;
+    background-image: url('../assets/Images/PageBackground.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: #f9f9f9;
+    overflow-x: hidden;
+    position: relative;
+
+}
+
+.text-shadow-default{
+    text-shadow: 0 0 0.42857em #e30613;
+}
+.text-shadow-white{
+    text-shadow: 0 0 0.42857em #FFF;
+}
+.marquee{
+  animation: marquee 15000ms linear infinite;
+}
+
+@font-face {
+    font-family: 'Redaction';
+    src: url('../assets/static/fonts/Redaction_20-Italic-a694b2f4e2673ea10dd893b69c6fdcc0.woff2');
+}
+@keyframes marquee {
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(-100%);
+    }
+}
+
+@media (max-width:133px){
+    html,body{
+        word-break: break-all;
+    }
+}

@@ -1,0 +1,6 @@
+export {Eye} from './Eye'
+export {Text} from './Text'
+export {Hamburger} from './Hamburger'
+export {Close} from './Close'
+export {Facebook} from './Facebook'
+export {Github} from './Github'
