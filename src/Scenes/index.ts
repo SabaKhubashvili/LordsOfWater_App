@@ -6,3 +6,5 @@ export {VideoSection} from './VideoSection/VideoSection'
 export {SmallBanner} from './SmallBanner/SmallBanner'
 export { Map } from './Map/Map'
 export {Footer} from './Footer/Footer'
+export {OurStory} from './OurStory/OurStory'
+

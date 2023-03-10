@@ -17,7 +17,7 @@ module.exports = {
         'default': '0 0 0.42857em #e30613',
      },
      backgroundImage:{
-      'Main':'url(../assets/Images/PageBackground.png)'
+      'Main':'url(../assets/Images/PageBackground.webp)'
      },
       fontFamily:{
         'Poppins':['Poppins', 'sans-serif'],

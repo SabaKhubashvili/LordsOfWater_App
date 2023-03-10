@@ -78,16 +78,16 @@ export const Navbar = ({selectedPage}:Props) => {
          {isAboveMediumScreens ?  <div className='flex justify-around'>
               {/* Nav Components */}
                 <div>
-                     <NavbarLink to='/' page='Home' selectedPage={selectedPage} />
+                     <NavbarLink page='Home' selectedPage={selectedPage} />
                 </div>
                 <div>
-                     <NavbarLink to='/aboutus' page='About Us' selectedPage={selectedPage} />
+                     <NavbarLink  page='About Us' selectedPage={selectedPage} />
                 </div>
                 <div>
-                     <NavbarLink to='/shop' page='Shop' selectedPage={selectedPage}/>
+                     <NavbarLink  page='Shop' selectedPage={selectedPage}/>
                 </div>
                 <div>
-                     <NavbarLink to='/social' page='Social'  selectedPage={selectedPage}/>
+                     <NavbarLink  page='Social'  selectedPage={selectedPage}/>
                 </div>
            </div>
           
@@ -142,17 +142,21 @@ export const Navbar = ({selectedPage}:Props) => {
                   </div>
                   <div>
                     {/* Nav Components */}
-                    <div>
+                    <div  className='border-solid  border-b-2 border-b-white sm:py-6 py-2 w-full mb-6 uppercase text-2xl font-bold list-none'>
                       {/* Nav Component */}
-                      <SmallScreenNavbarLink>Home</SmallScreenNavbarLink>
+                      <SmallScreenNavbarLink setMenu={setMenu} to='home' >Home</SmallScreenNavbarLink>
                     </div>
-                    <div>
+                    <div  className='border-solid  border-b-2 border-b-white sm:py-6 py-2 w-full mb-6 uppercase text-2xl font-bold list-none'>
                       {/* Nav Component */}
-                      <SmallScreenNavbarLink>About Us</SmallScreenNavbarLink>
+                      <SmallScreenNavbarLink setMenu={setMenu} to='aboutus'>Our Story</SmallScreenNavbarLink>
                     </div>
-                    <div>
+                    <div  className='border-solid  border-b-2 border-b-white sm:py-6 py-2 w-full mb-6 uppercase text-2xl font-bold list-none'>
                       {/* Nav Component */}
-                      <SmallScreenNavbarLink>Shop</SmallScreenNavbarLink>
+                      <SmallScreenNavbarLink setMenu={setMenu} to='shop' >Shop</SmallScreenNavbarLink>
+                    </div>
+                    <div  className='border-solid  border-b-2 border-b-white sm:py-6 py-2 w-full mb-6 uppercase text-2xl font-bold list-none'>
+                      {/* Nav Component */}
+                      <SmallScreenNavbarLink setMenu={setMenu} to='social' >Social</SmallScreenNavbarLink>
                     </div>
                   </div>
 

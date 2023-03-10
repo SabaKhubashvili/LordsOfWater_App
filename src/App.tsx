@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 
-import Router from '@/Router/Router';
 
-import { Footer, Navbar } from './Scenes';
+
+import { MainBanner, Map, Marque, SecondMarque, SmallBanner, VideoSection,Navbar,Footer, OurStory } from '@/Scenes'
 import { selectedPageEnum } from './types/types';
 
 const App = () => {
@@ -16,9 +16,16 @@ const App = () => {
         <BrowserRouter>
             <Navbar selectedPage={selectedPage}/>
             
-            <Router setSelectedPage={setSelectedPage}/>
+            <MainBanner  setSelectedPage={setSelectedPage}/>  
+            <Marque/>
+            <OurStory setSelectedPage={setSelectedPage}/>
+            <SecondMarque />
+            <VideoSection setSelectedPage={setSelectedPage}/>
+            <SmallBanner setSelectedPage={setSelectedPage}/>
+            <Map setSelectedPage={setSelectedPage}/>
+            <Marque />
             
-            <Footer/>
+            <Footer setSelectedPage={setSelectedPage}/>
 
         </BrowserRouter>
     </React.Fragment>

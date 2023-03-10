@@ -1,14 +1,22 @@
 import React from 'react'
 
 import {MainBannerSvg } from '@/assets/Svg'
-import BannerImage from '@/assets/Images/BannerImage.png'
+import BannerImage from '@/assets/Images/BannerImage.webp'
 import useMediaQuery from '@/Hooks/UseMediaQuery'
+import { selectedPageEnum } from '@/types/types'
+import { motion } from 'framer-motion'
 
-export const MainBanner = () => {
+interface Props{
+    setSelectedPage:(value:selectedPageEnum) => void
+}
+
+export const MainBanner = ({setSelectedPage}:Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1162px)")
     
 
   return (
+    <motion.div  id='home' onViewportEnter={()=>{setSelectedPage(selectedPageEnum.Home)}}>
+
     <section className={` mb-10 mt-44 w-11/12 md:py-52 py-10  rounded-md shadow-Main  md:px-16 px-4 justify-between  grid-1 border-solid border-2 border-white mx-auto md:flex`}>
         <div className='flex items-center flex-col'>
             {/* Left */}
@@ -30,5 +38,6 @@ export const MainBanner = () => {
             <img src={BannerImage} alt="" />
         </div>
     </section>
+    </motion.div>
   )
 }

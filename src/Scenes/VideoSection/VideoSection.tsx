@@ -3,8 +3,15 @@ import video from '@/assets/Video/MainVideo.mp4'
 
 import ReactPlayer from 'react-player'
 import { HandSkull,Heart } from '@/assets/Svg'
+import { selectedPageEnum } from '@/types/types'
 
-export const VideoSection = () => {
+
+interface Props{
+  setSelectedPage:(value:selectedPageEnum) => void
+}
+
+export const VideoSection = ({setSelectedPage}:Props) => {
+  
   return (
     <section className='w-11/12 mx-auto border-solid border-2 border-white shadow-Main px-4 py-5 my-10  '>
         <div className='w-full h-full my-4 shadow-Main border-solid border-2 border-white'>

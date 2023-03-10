@@ -1,15 +1,18 @@
 import React from 'react'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 interface Props{
     children:React.ReactNode
+    to:string
+    setMenu:(value:boolean)=>void
 }
 
-const SmallScreenNavbarLink = ({children}:Props) => {
+const SmallScreenNavbarLink = ({children,to,setMenu}:Props) => {
 
   return (
-    <li className='border-solid  border-b-2 border-b-white sm:py-6 py-2 w-full mb-6 uppercase text-2xl font-bold list-none'>
+    <AnchorLink href={`#${to}`} onClick={()=>{setMenu(false)}} >
         {children}
-    </li>
+    </AnchorLink>
   )
 }
 

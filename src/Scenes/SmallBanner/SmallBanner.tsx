@@ -1,7 +1,12 @@
 import React from 'react'
 import { WorldSecond,WaterSvg } from '@/assets/Svg'
+import { selectedPageEnum } from '@/types/types'
 
-export const SmallBanner = () => {
+interface Props{
+  setSelectedPage:(value:selectedPageEnum) => void
+}
+
+export const SmallBanner = ({setSelectedPage}:Props) => {
   return (
     <section className='w-11/12 mx-auto md:flex justify-between border-solid border-2 border-white '>
         <div className='basis-3/5  flex items-center sm:justify-center justify-around py-6 font-Redaction md:text-7xl text-shadow-white sm:text-6xl text-2xl flex-wrap  px-6'>

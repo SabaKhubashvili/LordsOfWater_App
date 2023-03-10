@@ -1,11 +1,18 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
+import backgroundImage from '@/assets/Images/aboutus_background.webp'
+import { selectedPageEnum } from '@/types/types'
 
-import backgroundImage from '@/assets/Images/aboutus_background.jpg'
+interface Props{
+  setSelectedPage:(value:selectedPageEnum) => void
+}
 
-const OurStory = () => {
+export const OurStory = ({setSelectedPage}:Props) => {
   
   return (
+    <motion.div  id='aboutus' onViewportEnter={()=>{setSelectedPage(selectedPageEnum.Aboutus)}}>
+
     <section className='w-11/12 my-10  gap-4 md:grid grid-cols-2 min-h-[60rem]  shadow-Main rounded-md mx-auto py-5 px-7 border-solid border-2 border-white'>
         <div className='w-full object-center object-cover border-solid border-2 border-white shadow-Main'>
           {/* Left */}
@@ -36,7 +43,7 @@ const OurStory = () => {
           </div>
         </div>
     </section>
+    </motion.div>
   )
 }
 
-export default OurStory

@@ -2,22 +2,26 @@ import React from 'react'
 
 import {  HandSkull, WorldSecond } from '@/assets/Svg'
 import { Chains } from '@/assets/Svg/Chains'
+import {motion} from 'framer-motion'
 
-import Image1 from '@/assets/Images/FooterImage_1.jpg'
-import Image2 from '@/assets/Images/FooterImage_2.jpg'
-import Image3 from '@/assets/Images/FooterImage_3.jpg'
-import Image4 from '@/assets/Images/FooterImage_4.jpg'
+import Image1 from '@/assets/Images/FooterImage_1.webp'
+import Image2 from '@/assets/Images/FooterImage_2.webp'
+import Image3 from '@/assets/Images/FooterImage_3.webp'
+import Image4 from '@/assets/Images/FooterImage_4.webp'
 
 import FooterBottom from './FooterBottom'
+import { selectedPageEnum } from '@/types/types'
 
-export const Footer = () => {
+interface Props{
+    setSelectedPage:(value:selectedPageEnum) => void
+  }
+
+export const Footer = ({setSelectedPage}:Props) => {
 
     
 
   return (
- <footer className='pb-10'>
-
-
+    <motion.footer className='pb-10' id='social' onViewportEnter={()=>{setSelectedPage(selectedPageEnum.Social)}}>
 
     <section className='w-11/12 mx-auto border-solid border-2 border-white shadow-Main'>
         <div>
@@ -64,7 +68,8 @@ export const Footer = () => {
             <FooterBottom/>
         </div>
 
-        </footer>
+
+        </ motion.footer>
   )
 }
 
